@@ -1,0 +1,688 @@
+/*!
+ * Reset.css v2.0 | MIT License | git.io/reset
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Existing styles.css content will be appended below */
+/* styles.css */
+/* Updated to Lavender and Purple Color Scheme */
+
+/* ================= General Styles ================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8ff; /* Very light lavender background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Dark grey text for contrast */
+}
+
+.container {
+    background-color: #fff; /* White container background */
+    padding: 1.875rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 90%;
+    max-width: 30rem;
+    margin-bottom: 1.875rem;
+    box-sizing: border-box;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 3%;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .form-group label {
+        font-size: 0.7rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    input[type="number"] {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+button.auth-button,
+button.action-button,
+.pin-actions button.action-button,
+.edit-vault-box button.action-button {
+    width: auto;
+    margin: 0.25rem;
+}
+}
+
+h2 {
+    text-align: center;
+    color: #9400D3; /* Dark purple for main headings */
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+h3 {
+    color: #6a5acd; /* Medium purple for subheadings */
+    margin-top: 0.9375rem;
+    margin-bottom: 0.625rem;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 3%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.375rem;
+    color: #555; /* Slightly darker label text */
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 0.625rem;
+    border: 1px solid #dcdcdc; /* Light grey border */
+    border-radius: 0.3125rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fefefe; /* Slightly off-white input background */
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 120px);
+    margin-right: 8px;
+}
+
+.password-container input[type="password"] {
+    padding-right: 35px;
+    flex-grow: 1;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 6px;
+    opacity: 0.6;
+    font-size: 1.3em;
+    color: #777;
+}
+
+.password-toggle:hover {
+    opacity: 0.9;
+}
+
+.optional-field {
+    display: none;
+    margin-top: 8px;
+}
+
+.checkbox-label {
+    display: inline-block;
+    margin-left: 6px;
+    font-weight: normal;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ================= Navigation Styles ================= */
+nav.main-navigation,
+nav.auth-navigation {
+    background-color: #E6E6FA; /* Lavender navigation background */
+    color: #555; /* Darker navigation text */
+    padding: 12px 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul.nav-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav li.nav-item {
+    padding: 0.625rem 1.125rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 0.3125rem;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+nav li.nav-item:hover,
+nav li.nav-item.active {
+    background-color: #D8BFD8; /* Light purple hover/active background */
+    color: #333; /* Darker text on hover/active */
+}
+
+/* ================= Button Styles ================= */
+button.auth-button,
+button.action-button,
+.pin-actions button.action-button,
+.edit-vault-box button.action-button {
+    background-color: #9400D3; /* Dark purple button background */
+    color: white;
+    padding: 0.625rem 1.125rem;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    font-weight: 500;
+}
+
+button.action-button,
+.pin-actions button.action-button,
+.edit-vault-box button.action-button {
+    width: auto;
+    margin: 4px;
+}
+
+button.auth-button:hover,
+button.action-button:hover,
+.pin-actions button.action-button:hover,
+.edit-vault-box button.action-button:hover {
+    background-color: #800080; /* Deeper purple on hover */
+}
+
+/* ================= Authentication Section Styles (Sign Up/Log In) ================= */
+.auth-section {
+    /* Styles for both signup and login sections */
+}
+
+.auth-form {
+    /* Styles for both signup and login forms if needed */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.auth-toggle-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.auth-toggle-link a {
+    color: #9400D3; /* Dark purple link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-toggle-link a:hover {
+    text-decoration: underline;
+}
+
+/* ================= Password Manager Section Styles (Vault, Accounts, etc.) ================= */
+.password-manager-section {
+    display: none;
+}
+
+.vault-section .vault-form {
+    margin-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+}
+
+.vault-item {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    background-color: #fff;
+    transition: background-color 0.2s ease;
+}
+
+.vault-item:hover {
+    background-color: #f0f0f5; /* Lighter lavender on hover */
+}
+
+.vault-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.vault-item-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+    margin-right: 10px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #777;
+    flex-shrink: 0;
+}
+
+.vault-item h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.vault-details {
+    color: #555;
+    padding-left: 0;
+}
+
+.vault-details p {
+    line-height: 1.4;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.vault-actions {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+    align-items: center;
+}
+
+.vault-actions button.action-button {
+    margin-right: 4px;
+    padding: 6px 12px;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+
+/* ================= PIN Request Overlay Styles ================= */
+.pin-request-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.pin-request-box {
+    background-color: white;
+    padding: 5%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 80%;
+    max-width: 320px;
+}
+
+@media (max-width: 600px) {
+    .pin-request-box {
+        padding: 3%;
+    }
+
+    .pin-request-box h3 {
+        font-size: 1rem;
+    }
+
+    .pin-request-box input[type="text"] {
+        font-size: 0.8rem;
+    }
+}
+
+.pin-request-box h3 {
+    color: #9400D3; /* Dark purple heading in pin request */
+    margin-bottom: 0.9375rem;
+    font-size: 1.2rem;
+}
+
+.pin-request-box input[type="text"] {
+    width: 80%;
+    margin: 12px 0;
+    font-size: 0.9rem;
+    padding: 8px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.pin-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* ================= Edit Vault Overlay Styles ================= */
+.edit-vault-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1010;
+    overflow-y: auto;
+}
+
+.edit-vault-box {
+    background-color: white;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 460px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .edit-vault-box {
+        padding: 2%;
+    }
+
+    .edit-vault-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .edit-vault-box label {
+        font-size: 0.7rem;
+    }
+
+    .edit-vault-box input[type="text"],
+    .edit-vault-box input[type="password"],
+    .edit-vault-box input[type="email"] {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .edit-vault-box button.action-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+.edit-vault-box h3 {
+    color: #9400D3; /* Dark purple heading in edit vault */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.edit-vault-box .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-vault-box label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.edit-vault-box input[type="text"],
+.edit-vault-box input[type="password"],
+.edit-vault-box input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #555;
+    background-color: #fefefe; /* Slightly off-white input background */
+}
+
+.edit-vault-box .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.edit-vault-box .password-container input[type="password"] {
+    padding-right: 35px;
+    flex-grow: 1;
+}
+
+.edit-vault-box .password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    padding: 6px;
+    opacity: 0.6;
+    font-size: 1em;
+    color: #777;
+}
+
+.edit-vault-box .password-toggle:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .edit-vault-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .edit-vault-box label {
+        font-size: 0.7rem;
+    }
+
+    .edit-vault-box input[type="text"],
+    .edit-vault-box input[type="password"],
+    .edit-vault-box input[type="email"] {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .edit-vault-box button.action-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ================= Password Strength Indicator Styles ================= */
+#password-strength-indicator {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #fff;
+}
+
+#strength-bar {
+    height: 8px;
+    background-color: #800080; /* Purple strength bar */
+    width: 0%;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    max-width: 100%;
+}
+
+#strength-text {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+/* ================= Settings Section Styles ================= */
+#user-settings p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* ================= Navigation Item Visibility ================= */
+#main-nav ul li.nav-item:nth-child(2),
+#main-nav ul li.nav-item:nth-child(4) {
+    display: none; /* Initially hidden, shown after login/signup */
+}
+
+/* ================= Vault Item Icon Styles ================= */
+.vault-item-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+    margin-right: 12px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: #777;
+    flex-shrink: 0;
+}
+
+.vault-item-icon.automatic-icon {
+    /* Styles for automatically assigned icons if needed */ /* REMOVED AUTOMATIC ICON STYLES */
+}
+
+.vault-item-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+/* ================= Image Upload Input Styling ================= */
+input[type="file"] {
+    padding: 0.5rem;
+    border: 1px dashed #dcdcdc; /* Light grey dashed border */
+    background-color: #fefefe; /* Off-white background */
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    font-size: 0.95rem;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    padding: 0.5rem 0.75rem;
+    background-color: #9400D3; /* Dark purple button color */
+    color: white;
+    border: none;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    margin-right: 0.625rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #800080; /* Deeper purple on hover */
+}
+
+/* ================= Generate Password Button Styling ================= */
+#generate-password-button,
+#edit-generate-password-button {
+    width: auto !important;
+    margin-left: 8px;
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    border-radius: 5px;
+}
+
+/* ================= Notification Styles ================= */
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Green */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red */
+}
